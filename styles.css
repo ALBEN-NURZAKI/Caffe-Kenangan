@@ -1,0 +1,139 @@
+/* General Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+/* Navbar Styling */
+.navbar {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+  background-color: #f8f9fa;
+}
+
+.nav-link {
+  color: #555 !important;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #007bff !important;
+}
+
+/* Header Section */
+header {
+  background: url("../assets/images/caffe-bg.jpg") center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+header h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+header .btn {
+  font-size: 1rem;
+  padding: 0.8rem 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header .btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+/* Section Styling */
+section {
+  padding: 3rem 0;
+}
+
+#menu .card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#menu .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+}
+
+/* Footer Styling */
+footer {
+  background-color: #343a40;
+  color: #ddd;
+  text-align: center;
+  padding: 1rem 0;
+  position: relative;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Notifikasi Styling */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  z-index: 1000;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.notification-error {
+  background-color: #f44336;
+}
+
+.notification-success {
+  background-color: #4caf50;
+}
+
+.notification.fade-out {
+  opacity: 0;
+  transform: translateY(-20px);
+}
